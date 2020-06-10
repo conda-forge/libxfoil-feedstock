@@ -33,7 +33,7 @@ test:
 
 about:
     home: https://github.com/montagdude/libxfoil
-    license: GPL-2
+    license: GPL-2.0-only
     license_family: GPL
     license_file: LICENSE
     summary: libxfoil (xfoil + python bindings)
