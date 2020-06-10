@@ -10,7 +10,7 @@ source:
     sha256: "1e251aac259bac84aa5be318ae62a496b705c625f0e54c44af230494904858ac"
 
 build:
-    number: 0
+    number: 1
     skip: true  # [py<36 or win]
 
 requirements:
@@ -33,7 +33,7 @@ test:
 
 about:
     home: https://github.com/montagdude/libxfoil
-    license: GPL-2
+    license: GPL-2.0-only
     license_family: GPL
     license_file: LICENSE
     summary: libxfoil (xfoil + python bindings)
