@@ -39,6 +39,7 @@ outputs:
             - python
             - libxfoil
         run:
+            - {{ pin_subpackage('libxfoil', max_pin="x.x") }}
             - python
 
     test:
