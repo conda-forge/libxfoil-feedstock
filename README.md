@@ -130,7 +130,6 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-libxfoil-green.svg)](https://anaconda.org/conda-forge/libxfoil) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libxfoil.svg)](https://anaconda.org/conda-forge/libxfoil) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libxfoil.svg)](https://anaconda.org/conda-forge/libxfoil) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libxfoil.svg)](https://anaconda.org/conda-forge/libxfoil) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyxfoil-green.svg)](https://anaconda.org/conda-forge/pyxfoil) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyxfoil.svg)](https://anaconda.org/conda-forge/pyxfoil) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyxfoil.svg)](https://anaconda.org/conda-forge/pyxfoil) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyxfoil.svg)](https://anaconda.org/conda-forge/pyxfoil) |
 
 Installing libxfoil
 ===================
@@ -142,10 +141,10 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libxfoil, pyxfoil` can be installed with:
+Once the `conda-forge` channel has been enabled, `libxfoil` can be installed with:
 
 ```
-conda install libxfoil pyxfoil
+conda install libxfoil
 ```
 
 It is possible to list all of the versions of `libxfoil` available on your platform with:
