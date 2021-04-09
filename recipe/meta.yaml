@@ -10,8 +10,7 @@ source:
     sha256: "1e251aac259bac84aa5be318ae62a496b705c625f0e54c44af230494904858ac"
 
 build:
-    number: 3
-    skip: true  # [py<37]
+    number: 4
 
 outputs:
 
@@ -26,6 +25,8 @@ outputs:
             - {{ compiler("m2w64_c") }}        # [win]
             - {{ compiler('m2w64_fortran') }}  # [win]
             - cmake
+        host:
+            - python
 
 
   - name: pyxfoil
