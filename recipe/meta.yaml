@@ -12,40 +12,25 @@ source:
 build:
     number: 4
 
-outputs:
 
-  - name: libxfoil
-    script: build_lib.bat  # [win]
-    script: build_lib.sh  # [not win]
+requirements:
+    build:
+        - {{ compiler("c") }}              # [unix]
+        - {{ compiler("fortran") }}        # [unix]
+        - {{ compiler("m2w64_c") }}        # [win]
+        - {{ compiler('m2w64_fortran') }}  # [win]
+        - cmake
+        - vs2017_win-64                     # [win64]
+        - swig
+    host:
+        - python
 
-    requirements:
-        build:
-            - {{ compiler("c") }}              # [unix]
-            - {{ compiler("fortran") }}        # [unix]
-            - {{ compiler("m2w64_c") }}        # [win]
-            - {{ compiler('m2w64_fortran') }}  # [win]
-            - cmake
-        host:
-            - python
+    run:
+        - python
 
-
-  - name: pyxfoil
-    script: build_py.bat  # [win]
-    script: build_py.sh  # [not win]
-    requirements:
-        build:
-            - {{ compiler("c") }}
-            - swig
-        host:
-            - python
-            - libxfoil
-        run:
-            - {{ pin_subpackage('libxfoil', max_pin="x.x") }}
-            - python
-
-    test:
-      imports:
-        - xfoil_interface
+test:
+  imports:
+    - xfoil_interface
 
 about:
     home: https://github.com/montagdude/libxfoil
