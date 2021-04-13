@@ -29,4 +29,4 @@ cd ..
 %PYTHON% setup.py build_ext
 %PYTHON% setup.py install
 
-cp "%LIBRARY_PREFIX%/lib/libxfoil.dll" "%LIBRARY_PREFIX%/bin/libxfoil.dll"
+move "%LIBRARY_PREFIX%\lib\libxfoil.dll" "%LIBRARY_PREFIX%\bin\libxfoil.dll"
