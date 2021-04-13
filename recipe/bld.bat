@@ -1,6 +1,10 @@
 mkdir build
 cd build 
 
+set "CC=gcc.exe"
+set "CXX=g++.exe"
+set "FC=gfortran.exe"
+
 cmake -G "MinGW Makefiles" ^
       -D CMAKE_BUILD_TYPE:STRING=Release ^
       -D CMAKE_PREFIX_PATH:FILEPATH=%LIBRARY_PREFIX% ^
@@ -24,3 +28,5 @@ cd ..
 
 %PYTHON% setup.py build_ext
 %PYTHON% setup.py install
+
+move "%LIBRARY_PREFIX%\lib\libxfoil.dll" "%LIBRARY_PREFIX%\bin\libxfoil.dll"
