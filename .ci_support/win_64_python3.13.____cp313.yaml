@@ -1,8 +1,10 @@
 channel_sources:
-- conda-forge
+- conda-forge/label/python_rc,conda-forge
 channel_targets:
 - conda-forge main
 m2w64_c_compiler:
+- m2w64-toolchain
+m2w64_c_stdlib:
 - m2w64-toolchain
 m2w64_fortran_compiler:
 - m2w64-toolchain
@@ -11,6 +13,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.7.* *_cpython
+- 3.13.* *_cp313
 target_platform:
 - win-64
+zip_keys:
+- - python
+  - channel_sources
