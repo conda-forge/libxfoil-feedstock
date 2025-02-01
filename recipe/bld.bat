@@ -1,10 +1,6 @@
 mkdir build
 cd build 
 
-set "CC=gcc.exe"
-set "CXX=g++.exe"
-set "FC=gfortran.exe"
-
 cmake -G "MinGW Makefiles" ^
       -D CMAKE_BUILD_TYPE:STRING=Release ^
       -D CMAKE_PREFIX_PATH:FILEPATH=%LIBRARY_PREFIX% ^
@@ -12,8 +8,8 @@ cmake -G "MinGW Makefiles" ^
       -D CMAKE_SH="CMAKE_SH-NOTFOUND" ^
       ..
 
-mingw32-make
-mingw32-make install
+make
+make install
 
 rem create the libxfoil.lib which is needed for linking!!
 rem copied from lapack-feedstock
