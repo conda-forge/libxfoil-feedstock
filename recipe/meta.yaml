@@ -23,8 +23,8 @@ requirements:
         - cmake
         - make
         - swig
-        - cross-python                     #[build_platform != target_platform]
-        - python                           #[build_platform != target_platform]
+        - cross-python                     # [build_platform != target_platform]
+        - python                           # [build_platform != target_platform]
     host:
         - python
         - setuptools
